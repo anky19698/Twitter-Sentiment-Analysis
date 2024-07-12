@@ -3,13 +3,14 @@
 This project aims to perform sentiment analysis on tweets using various machine learning models. The goal is to classify the sentiment of tweets into four categories: Positive, Negative, Neutral, and Irrelevant.
 
 ## Table of Contents
-- [Installation](#installation)
+- [Project Overview](#project-overview)
+- [Dependencies](#dependencies)
+- [Data](#data)
+- [Preprocessing](#preprocessing)
+- [Models](#models)
+- [Results](#results)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Models and Results](#models-and-results)
-- [Future Work](#future-work)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
