@@ -27,3 +27,82 @@ You can install the necessary libraries using the following command:
 
 ```bash
 pip install numpy pandas nltk scikit-learn spacy xgboost
+```
+
+## Data
+
+The project uses two datasets:
+- `twitter_training.csv`: Main dataset for training and testing
+- `twitter_validation.csv`: Validation dataset for final model evaluation
+
+Both datasets contain columns: tweet_id, entity, sentiment, and tweet_text.
+
+## Preprocessing
+
+Text preprocessing is done using spaCy, including:
+- Tokenization
+- Lemmatization
+- Removal of stop words and punctuation
+
+## Models
+
+The following machine learning models are implemented and evaluated:
+
+1. Multinomial Naive Bayes
+2. Random Forest Classifier
+3. Logistic Regression
+4. XGBoost Classifier
+5. Support Vector Machine (SVM)
+
+GridSearchCV is used to find the best hyperparameters for each model.
+
+## Results
+
+The Random Forest Classifier achieved the best performance on the test set:
+          precision    recall  f1-score   support
+       0       0.97      0.84      0.90      2696
+       1       0.85      0.95      0.90      4119
+       2       0.91      0.94      0.92      4380
+       3       0.94      0.89      0.91      3605
+
+accuracy                           0.91     14800
+macro avg      0.92      0.90      0.91     14800
+weighted avg   0.91      0.91      0.91     14800
+
+
+On the validation set, the model achieved:
+
+precision    recall  f1-score   support
+       0       0.98      0.90      0.94       172
+       1       0.95      0.95      0.95       277
+       2       0.94      0.96      0.95       266
+       3       0.93      0.95      0.94       285
+
+accuracy                           0.94      1000
+macro avg      0.95      0.94      0.94      1000
+weighted avg   0.95      0.94      0.94      1000
+
+
+## Usage
+
+1. Clone the repository
+2. Install the required dependencies
+3. Run the Jupyter notebook to train and evaluate the models
+4. Use the trained model (saved as `model.pkl`) for sentiment prediction on new data
+
+```python
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Load the model
+model = pickle.load(open('model.pkl', 'rb'))
+
+# Preprocess and predict
+def predict_sentiment(text):
+    processed_text = process_text(text)  # Implement the process_text function as in the notebook
+    return model.predict([processed_text])[0]
+
+# Example usage
+sentiment = predict_sentiment("I love this new product!")
+print(sentiment)
+```
