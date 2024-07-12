@@ -59,29 +59,34 @@ GridSearchCV is used to find the best hyperparameters for each model.
 ## Results
 
 The Random Forest Classifier achieved the best performance on the test set:
-          precision    recall  f1-score   support
-       0       0.97      0.84      0.90      2696
-       1       0.85      0.95      0.90      4119
-       2       0.91      0.94      0.92      4380
-       3       0.94      0.89      0.91      3605
 
-accuracy                           0.91     14800
-macro avg      0.92      0.90      0.91     14800
-weighted avg   0.91      0.91      0.91     14800
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.97      | 0.84   | 0.90     | 2696    |
+| 1     | 0.85      | 0.95   | 0.90     | 4119    |
+| 2     | 0.91      | 0.94   | 0.92     | 4380    |
+| 3     | 0.94      | 0.89   | 0.91     | 3605    |
 
+| Metric       | Score |
+|--------------|-------|
+| Accuracy     | 0.91  |
+| Macro Avg    | 0.91  |
+| Weighted Avg | 0.91  |
 
 On the validation set, the model achieved:
 
-precision    recall  f1-score   support
-       0       0.98      0.90      0.94       172
-       1       0.95      0.95      0.95       277
-       2       0.94      0.96      0.95       266
-       3       0.93      0.95      0.94       285
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.98      | 0.90   | 0.94     | 172     |
+| 1     | 0.95      | 0.95   | 0.95     | 277     |
+| 2     | 0.94      | 0.96   | 0.95     | 266     |
+| 3     | 0.93      | 0.95   | 0.94     | 285     |
 
-accuracy                           0.94      1000
-macro avg      0.95      0.94      0.94      1000
-weighted avg   0.95      0.94      0.94      1000
-
+| Metric       | Score |
+|--------------|-------|
+| Accuracy     | 0.94  |
+| Macro Avg    | 0.94  |
+| Weighted Avg | 0.94  |
 
 ## Usage
 
