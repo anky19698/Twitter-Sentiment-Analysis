@@ -11,10 +11,17 @@ This project aims to perform sentiment analysis on tweets using various machine 
 - [Results](#results)
 - [Usage](#usage)
 
+## Project Overview
 
-## Installation
+This project aims to analyze the sentiment of tweets using natural language processing (NLP) techniques and machine learning algorithms. The main steps include:
 
-To run this project, you need to have Python installed along with the following libraries:
+1. Data preprocessing and cleaning
+2. Feature extraction using TF-IDF vectorization
+3. Training and evaluating multiple machine learning models
+4. Hyperparameter tuning using GridSearchCV
+5. Model selection and final evaluation on a validation set
+
+## Dependencies
 
 - numpy
 - pandas
@@ -22,7 +29,6 @@ To run this project, you need to have Python installed along with the following 
 - scikit-learn
 - spacy
 - xgboost
-- pickle
 
 You can install the necessary libraries using the following command:
 
